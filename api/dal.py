@@ -65,11 +65,6 @@ GROUP BY entity_id
 """
 
 
-show_intel = (
-    "SELECT max(entity_id) FROM intel_signals group by entity_id ORDER BY entity_id"
-)
-show_tables = "show tables"
-
 def run_query(query: str):
     cursor = conn.cursor()
     cursor.execute(query)
