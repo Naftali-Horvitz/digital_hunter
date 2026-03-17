@@ -83,6 +83,3 @@ def load_target_path(entity_id: str):
         WHERE entity_id = '{entity_id}'
         """
     return run_query(query)
-
-if __name__ == '__main__':
-    load_target_path("TGT-015")
