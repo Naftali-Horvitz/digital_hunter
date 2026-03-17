@@ -6,6 +6,7 @@ The sql service will start and our application will build.
 
 # 2.
 To see the results of the queries, you can click on the following link
+# http://localhost:8080/docs
 
 The application is made up of 3 folders
 1. Data files in the data folder

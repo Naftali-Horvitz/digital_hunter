@@ -7,15 +7,16 @@ services:
       MYSQL_DATABASE: digital_hunter
     ports:
       - "3306:3306"
-    volumes:
-      - mysql_data:/var/lib/mysql
-      - .data/dump.sql:/docker-entrypoint-initdb.d/dump.sql
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 30s
       timeout: 10s
       retries: 5
       start_period: 30s
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./data/dump.sql:/docker-entrypoint-initdb.d/dump.sql
+
   
   api:
     build: ./api

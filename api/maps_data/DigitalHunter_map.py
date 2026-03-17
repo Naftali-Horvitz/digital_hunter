@@ -3,7 +3,7 @@ import geopandas as gpd
 
 
 def plot_map_with_geometry(coords,
-                           shapefile_path="api/maps_data/ne_50m_admin_0_countries.shp"):
+                           shapefile_path="./maps_data/ne_50m_admin_0_countries.shp"):
     countries = gpd.read_file(shapefile_path)
 
     fig, ax = plt.subplots(figsize=(8, 10))
