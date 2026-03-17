@@ -68,8 +68,7 @@ GROUP BY entity_id
 def run_query(query: str):
     cursor = conn.cursor()
     cursor.execute(query)
-    res = cursor.fetchall()
-    return res
+    return cursor.fetchall()
 
 def load_target_path(entity_id: str):
     query = f"""
